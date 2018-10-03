@@ -1,0 +1,88 @@
+<form [formGroup]="this.appCom.myForm" (ngSubmit)="onSubmit()" [class.submitted]="submitted">
+							<div class="task-manage-form">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<!--Task Id & Task -->
+											<div class="form-group">
+												<label for="task">Task:</label>
+												<input type="hidden" class="form-control" id="TaskId" name="TaskId" formControlName="TaskId">
+												<input type="text" class="form-control" id="task" name="Task" formControlName="Task">
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<!--Task Priority-->
+											<div class="form-group">
+												<label for="task">Priority:</label>
+												<div class="form-slider">
+													<b>0</b><input type="range" min="0" max="30" class="slider" step="1" value="0" name="Priority"
+													 formControlName="Priority"  /><b>30</b>													
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<!--Parent task-->
+											<div class="form-group">
+												<label for="task">Parent Task:</label>
+												<select class="form-control" name="ParentId" formControlName="ParentId">  
+														<option selected="--Select Task--" value="" class="ng-binding">--Select Task--</option>  
+														<option [ngValue]="parentTask.ParentId" *ngFor="let parentTask of this.appCom.parentTaskList">  
+															{{parentTask.Parent_Task}}  
+														</option>  
+														</select>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<!--Task Start Date-->
+											<div class="form-group">
+												<label for="task">Start date:</label>
+												<div class="input-group date">
+													<input type="date" class="datepicker form-control" name="StartDate" formControlName="StartDate">
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<!--Task End Date-->
+											<div class="form-group">
+												<label for="task">End date:</label>
+												<div class="input-group date">
+													<input type="date" class="datepicker form-control" name="EndDate" formControlName="EndDate">
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6 col-sm-offset-3">
+											<div class="form-group form-btns">
+												<button class="btn btn-primary" ng-disabled="this.appCom.myForm.form.valid">{{ this.appCom.myForm.get('TaskId').value ? 'Update' : 'Add' }} Task</button>
+												<button type="button" class="btn btn-secondary" (click)="ResetTask()">Reset</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</form>
+					

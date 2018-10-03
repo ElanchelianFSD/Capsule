@@ -1,0 +1,35 @@
+<ngx-loading-bar height="5px"></ngx-loading-bar>
+<div class="container">
+	<div class="wrapper">
+		<header>
+			<h1>Task Manager</h1>
+		</header>
+		<section>
+			<div class="task-manager-page">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a data-toggle="tab" href="#addTask">Add Task</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#viewTask">View Task</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div id="addTask" class="tab-pane fade in active">
+						
+							<app-add-task></app-add-task>	
+						
+					</div>		
+					<div id="viewTask" class="tab-pane fade">
+						
+							<app-view-task></app-view-task>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		Copyright &copy; 2018 Elanchelian Capsule
+	</footer>
+</div>

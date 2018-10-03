@@ -1,0 +1,133 @@
+<form>
+		<div class="task-manage-form">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="task" class="frst-label">Task:</label>
+												<input type="text" class="form-control" id="view-task" [(ngModel)]="search.taskSearch" name="taskSearch">
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="task" class="frst-label">Parent Task:</label>
+
+												<select class="form-control" [(ngModel)]="search.parentTaskSearch" name="parentTaskSearch">  																											
+														<option selected="--Select Task--" value="">--Select Task--</option>  
+														<option [ngValue]="parentTask.ParentId" *ngFor="let parentTask of this.appCom.parentTaskList">  
+															{{parentTask.Parent_Task}}  
+														</option>  
+													</select>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="task">Priority From:</label>
+												<input type="text" class="form-control" id="priority-from" [(ngModel)]="search.priorityFromSearch" name="priorityFromSearch">
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="task">Priority To:</label>
+												<input type="text" class="form-control" id="priority-to" [(ngModel)]="search.priorityToSearch" name="priorityToSearch">
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="task">Start Date:</label>
+												<div class="input-group date">
+													<input type="date" class="datepicker form-control" id="start-date" [(ngModel)]="search.startDateSearch" name="startDateSearch">
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="task">End Date:</label>
+												<div class="input-group date">
+													<input type="date" class="datepicker form-control" id="end-date" name="end-date" [(ngModel)]="search.endDateSearch" name="endDateSearch">
+
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="table-responsive task-table">
+											<table class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th>Task</th>
+														<th>Parent</th>
+														<th>Task Name</th>
+														<th>Start</th>
+														<th>End</th>
+														<th>Priority</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr *ngFor="let task of this.appCom.pagedItems | filter : { Task : search.taskSearch, StartDate : search.startDateSearch, EndDate : search.endDateSearch, ParentId : search.parentTaskSearch, PriorityFrom : search.priorityFromSearch, PriorityTo : search.priorityToSearch } ">
+														<td align="center">{{task.TaskId}}</td>
+														<td align="center">{{task.ParentId}}</td>
+														<td align="center">{{task.Task}}</td>
+														<td align="center">{{task.StartDate | date: 'MM/dd/yyyy'}}</td>
+														<td align="center">{{task.EndDate | date: 'MM/dd/yyyy'}}</td>
+														<td align="center">{{task.Priority}}</td>
+														<td>
+															<button class="btn btn-primary" (click)="EditTask(task)" [disabled]="!task.IsActive">Edit</button>
+															<button class="btn btn-default" (click)="EndTask(task)" [disabled]="!task.IsActive">End Task</button>
+														</td>
+													</tr>
+													<tr *ngIf="task?.length">
+														<td colspan="7">No Data found!</td>
+													</tr>
+
+													<tr>
+														<td colspan="7">
+
+															<div *ngFor="let item of this.appCom.pagedItems">{{item.name}}</div>
+
+
+															<ul *ngIf="this.appCom.pager.pages && this.appCom.pager.pages.length" class="pagination">
+																<li [ngClass]="{disabled:this.appCom.pager.currentPage === 1}">
+																	<a (click)="this.appCom.setPage(1)">
+																		<< </a>
+																</li>
+																<li [ngClass]="{disabled:this.appCom.pager.currentPage === 1}">
+																	<a (click)="this.appCom.setPage(this.appCom.pager.currentPage - 1)">
+																		< </a>
+																</li>
+
+																<li [ngClass]="{active:this.appCom.pager.currentPage === this.appCom.page}">
+																	<a>{{this.appCom.pager.currentPage}}</a>
+																</li>
+
+																<li [ngClass]="{disabled:this.appCom.pager.currentPage === this.appCom.pager.totalPages}">
+																	<a (click)="this.appCom.setPage(this.appCom.pager.currentPage + 1)"> > </a>
+																</li>
+																<li [ngClass]="{disabled:this.appCom.pager.currentPage === this.appCom.pager.totalPages}">
+																	<a (click)="this.appCom.setPage(this.appCom.pager.totalPages)"> >> </a>
+																</li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+										</div>
+									</div>
+								</div>
+		</div>
+</form>
+					 
