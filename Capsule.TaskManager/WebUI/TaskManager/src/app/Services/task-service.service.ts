@@ -1,7 +1,7 @@
 import { Component,NgModule, Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 
-var serviceURL="http://localhost:53269/";
+var serviceURL="http://localhost:100/";
 
 @Injectable({
   providedIn: 'root'

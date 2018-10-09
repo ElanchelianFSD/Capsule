@@ -3,3 +3,14 @@
 ################################################################################
 
 /Capsule.TaskManager/Service/Capsule.TaskManager.Api/Properties/PublishProfiles
+/Capsule.TaskManager/Service/Capsule.TaskManager.Api/obj/Release
+/Capsule.TaskManager/Service/Capsule.TaskManager.Api/bin
+/Capsule.TaskManager/Service/Capsule.TaskManager.Api.Tests/obj/Release
+/Capsule.TaskManager/Service/Capsule.TaskManager.Business/obj/Release
+/Capsule.TaskManager/Service/Capsule.TaskManager.Business/bin/Release
+/Capsule.TaskManager/Service/Capsule.TaskManager.DataAccess/obj
+/Capsule.TaskManager/Service/Capsule.TaskManager.DataAccess/bin/Release
+/Capsule.TaskManager/Service/Capsule.TaskManager.NBench/obj
+/Capsule.TaskManager/Service/Capsule.TaskManager.NBench/bin/Debug
+/Capsule.TaskManager/Service/Capsule.TaskManager.DataContract/obj
+/Capsule.TaskManager/Service/Capsule.TaskManager.DataContract/bin/Release

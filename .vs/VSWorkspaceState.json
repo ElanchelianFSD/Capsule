@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Capsule.TaskManager",
+    "\\Capsule.TaskManager\\Service",
+    "\\Capsule.TaskManager\\Service\\Capsule.TaskManager.Api",
+    "\\Capsule.TaskManager\\Service\\Capsule.TaskManager.Api\\Controllers",
     "\\Capsule.TaskManager\\WebUI\\TaskManager"
   ],
-  "SelectedNode": "\\Capsule.TaskManager\\Capsule.TaskManager.sln",
+  "SelectedNode": "\\Capsule.TaskManager",
   "PreviewInSolutionExplorer": false
 }

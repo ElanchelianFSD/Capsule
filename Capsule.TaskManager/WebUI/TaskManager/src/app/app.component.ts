@@ -19,6 +19,7 @@ import Swal from 'sweetalert2';
   declarations: [],
   imports: [],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppComponent implements OnInit {  

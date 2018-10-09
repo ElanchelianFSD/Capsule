@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\317436\FSD\FSD-Capsule\Capsule.TaskManager\Service\Capsule.TaskManager.DataAccess\Entity\TaskManagerApiEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataAccess\Entity\TaskManagerApiEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

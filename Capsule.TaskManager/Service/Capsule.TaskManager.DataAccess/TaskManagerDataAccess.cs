@@ -90,8 +90,7 @@ namespace Capsule.TaskManager.DataAccess
                     objtask.Start_Date = taskModel.StartDate;
                     objtask.End_Date = taskModel.EndDate;
                     objtask.IsActive = taskModel.IsActive;
-                    objtask.Priority = taskModel.Priority;
-                    taskManagerEntity.SaveChanges();
+                    objtask.Priority = taskModel.Priority;                    
                     try
                     {
                         taskManagerEntity.SaveChanges();

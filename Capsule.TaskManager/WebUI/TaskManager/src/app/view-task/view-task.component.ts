@@ -28,7 +28,7 @@ declare var $: any;
 
 export class ViewTaskComponent implements OnInit {
 
- constructor(private appServices:TaskServiceService, private pageService: PageService, private fb: FormBuilder,private appCom :AppComponent) { }   
+ constructor(private appServices:TaskServiceService, private pageService: PageService, private fb: FormBuilder,public appCom :AppComponent) { }   
   title = 'Task Manager';
     parentTaskList: any;
     taskDetails: any = [];   
