@@ -4,6 +4,5 @@ C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskMana
 C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\obj\Debug\Capsule.TaskManager.DataContract.pdb
 C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\bin\Debug\Capsule.TaskManager.DataContract.dll
 C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\bin\Debug\Capsule.TaskManager.DataContract.pdb
-C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\obj\Debug\Capsule.TaskManager.DataContract.csprojResolveAssemblyReference.cache
 C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\obj\Debug\Capsule.TaskManager.DataContract.dll
 C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.DataContract\obj\Debug\Capsule.TaskManager.DataContract.pdb

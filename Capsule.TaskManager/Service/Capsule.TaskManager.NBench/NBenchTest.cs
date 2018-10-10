@@ -20,7 +20,7 @@ namespace Capsule.TaskManager.NBench
             _objCounter = context.GetCounter("TaskCounter");
         }
 
-        [PerfBenchmark(Description = "Counter iteration performance test GETPARENTTASK()", NumberOfIterations = 15, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
+        [PerfBenchmark(Description = "Counter iteration performance test GETPARENTTASK()", NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
         [CounterMeasurement("TaskCounter")]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         public void NBench_GetParentTask()
@@ -30,7 +30,7 @@ namespace Capsule.TaskManager.NBench
             _objCounter.Increment();
         }
 
-        [PerfBenchmark(Description = "Counter iteration performance test for GETALLTASK()", NumberOfIterations = 15, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
+        [PerfBenchmark(Description = "Counter iteration performance test for GETALLTASK()", NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
         [CounterMeasurement("TaskCounter")]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         public void NBench_GetAllTask()
@@ -40,7 +40,7 @@ namespace Capsule.TaskManager.NBench
             _objCounter.Increment();
         }
 
-        [PerfBenchmark(Description = "Counter iteration performance test INSERTTASK()", NumberOfIterations = 15, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
+        [PerfBenchmark(Description = "Counter iteration performance test INSERTTASK()", NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
         [CounterMeasurement("TaskCounter")]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         public void NBench_InsertTask()
@@ -58,7 +58,7 @@ namespace Capsule.TaskManager.NBench
             _objCounter.Increment();
         }
 
-        [PerfBenchmark(Description = "Counter iteration performance test UPDATETASK()", NumberOfIterations = 15, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
+        [PerfBenchmark(Description = "Counter iteration performance test UPDATETASK()", NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
         [CounterMeasurement("TaskCounter")]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         public void NBench_UpdateTask()
@@ -77,7 +77,7 @@ namespace Capsule.TaskManager.NBench
             _objCounter.Increment();
         }
 
-        [PerfBenchmark(Description = "Counter iteration performance test ENDTASK()", NumberOfIterations = 15, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
+        [PerfBenchmark(Description = "Counter iteration performance test ENDTASK()", NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Measurement, RunTimeMilliseconds = 1000)]
         [CounterMeasurement("TaskCounter")]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         public void NBench_EndTask()
