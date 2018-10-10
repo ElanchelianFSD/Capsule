@@ -10,3 +10,15 @@ C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskMana
 C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.csprojResolveAssemblyReference.cache
 C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.dll
 C:\Users\Elanchelian\Capsule\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.pdb
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.Business.dll
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.Business.pdb
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.DataAccess.dll
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.DataContract.dll
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\EntityFramework.dll
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.DataAccess.pdb
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.DataAccess.dll.config
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\Capsule.TaskManager.DataContract.pdb
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\bin\Debug\EntityFramework.xml
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.csprojResolveAssemblyReference.cache
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.dll
+C:\Users\Elanchelian\Source\Capsule.TaskManager\Service\Capsule.TaskManager.Business\obj\Debug\Capsule.TaskManager.Business.pdb
