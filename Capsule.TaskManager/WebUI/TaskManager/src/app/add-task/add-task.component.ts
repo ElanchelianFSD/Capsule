@@ -93,7 +93,7 @@ export class AddTaskComponent implements OnInit {
             }
           );
        }
-       else{
+       else{         
            this.appServices.updateEditTask(this.appCom.myForm.value).subscribe(data => {         
               if (data) {                        
                  Swal('success', `Data Updated successfully...`, 'success');

@@ -51,9 +51,7 @@ namespace Capsule.TaskManager.NBench
             addTask.StartDate = DateTime.Now;
             addTask.EndDate = DateTime.Now;
             addTask.Priority = 15;
-            addTask.ParentId = 3;
-            //JavaScriptSerializer objJavascript = new JavaScriptSerializer();
-            //var testModels = objJavascript.Serialize(addTask);
+            addTask.ParentId = 3;        
             var isAdded = taskManagerController.InsertTaskDetails(addTask);
             _objCounter.Increment();
         }
@@ -70,9 +68,7 @@ namespace Capsule.TaskManager.NBench
             updateTask.StartDate = DateTime.Now;
             updateTask.EndDate = DateTime.Now;
             updateTask.Priority = 30;
-            updateTask.ParentId = 2;
-            //JavaScriptSerializer objJavascript = new JavaScriptSerializer();
-            //var testModels = objJavascript.Serialize(updateTask);
+            updateTask.ParentId = 2;         
             var isUpdated = taskManagerController.InsertTaskDetails(updateTask);
             _objCounter.Increment();
         }
@@ -89,9 +85,7 @@ namespace Capsule.TaskManager.NBench
             endTask.StartDate = DateTime.Now;
             endTask.EndDate = DateTime.Now;
             endTask.Priority = 30;
-            endTask.ParentId = 2;
-            //JavaScriptSerializer objJavascript = new JavaScriptSerializer();
-            //var testModels = objJavascript.Serialize(endTask);
+            endTask.ParentId = 2;        
             var isSuccess = taskManagerController.UpdateEndTask(endTask);
             _objCounter.Increment();
         }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Data.Entity;
 using Capsule.TaskManager.DataContract;
 using Capsule.TaskManager.DataAccess.Entity;
+
 namespace Capsule.TaskManager.DataAccess
 {
     public class TaskManagerDataAccess : ITaskManagerDataAccess
@@ -35,7 +36,7 @@ namespace Capsule.TaskManager.DataAccess
             using (TaskManagerApiEntities taskManagerEntity = new TaskManagerApiEntities())
             {
                 taskModel = (from taskDts in taskManagerEntity.Tasks.Include("ParentTask")
-                             orderby taskDts.Start_Date descending
+                             orderby taskDts.Start_Date, taskDts.Task_ID descending
                              select new TaskModel
                              {
                                  ParentId = taskDts.ParentTask.Parent_ID,
@@ -90,7 +91,8 @@ namespace Capsule.TaskManager.DataAccess
                     objtask.Start_Date = taskModel.StartDate;
                     objtask.End_Date = taskModel.EndDate;
                     objtask.IsActive = taskModel.IsActive;
-                    objtask.Priority = taskModel.Priority;                    
+                    objtask.Priority = taskModel.Priority;
+                    taskManagerEntity.Entry(objtask).State = EntityState.Modified;
                     try
                     {
                         taskManagerEntity.SaveChanges();

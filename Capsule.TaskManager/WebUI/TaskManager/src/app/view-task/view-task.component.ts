@@ -32,6 +32,10 @@ export class ViewTaskComponent implements OnInit {
   title = 'Task Manager';
     parentTaskList: any;
     taskDetails: any = [];   
+    pager: any = {};
+    pagedItems: any = [];
+    page: number;
+    response: any;
     search: any = {
     taskSearch: '',
     parentTaskSearch: '',
@@ -46,12 +50,23 @@ export class ViewTaskComponent implements OnInit {
   }
 
    public EditTask(task) {     
+     
     $('.task-manager-page a[href="#addTask"]').tab('show');
     if (task.StartDate != null)
-      task.StartDate = task.StartDate.slice(0, -9);
+      task.StartDate = task.StartDate.substring(0,10);      
     if (task.EndDate != null)
-      task.EndDate = task.EndDate.slice(0, -9);      
-    this.appCom.myForm.setValue(task);
+      task.EndDate = task.EndDate.substring(0, 10); 
+      var modelConverter={
+        StartDate: task.StartDate,
+        EndDate: task.EndDate,
+        TaskId: task.TaskId,
+        Task: task.Task,
+        ParentTask: task.ParentTask,
+        ParentId: task.ParentId,
+        Priority: task.Priority,
+        IsActive: task.IsActive
+      };     
+    this.appCom.myForm.setValue(modelConverter);
   };
 
   public EndTask(task) {    

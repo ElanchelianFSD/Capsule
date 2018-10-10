@@ -54,9 +54,9 @@ namespace Capsule.TaskManager.Api.Tests
             TaskModel taskModel = new TaskModel
             {
                 ParentId = 1,
-                Task = "This is the test task",
-                StartDate = DateTime.Parse("09/26/2018"),
-                EndDate = DateTime.Parse("09/30/2018"),
+                Task = "This is the Unit test task",
+                StartDate = DateTime.Parse("26-09-2018"),
+                EndDate = DateTime.Parse("10-10-2018"),
                 Priority = 1,
                 IsActive = true
             };
@@ -81,8 +81,8 @@ namespace Capsule.TaskManager.Api.Tests
                 ParentId = 1,
                 TaskId = 1,
                 Task = "This is Updated test task",
-                StartDate = DateTime.Parse("09/26/2018"),
-                EndDate = DateTime.Parse("09/30/2018"),
+                StartDate = DateTime.Parse("26-09-2018"),
+                EndDate = DateTime.Parse("10-10-2018"),
                 Priority = 1,
                 IsActive = true
             };
@@ -91,7 +91,7 @@ namespace Capsule.TaskManager.Api.Tests
 
             //Assert            
             Assert.IsNotNull(returnVal);
-            Assert.AreEqual(true, returnVal);
+            Assert.AreEqual(1, returnVal);
         }
     }
 }
